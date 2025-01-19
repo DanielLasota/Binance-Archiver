@@ -54,8 +54,8 @@ def launch_data_sink(
             raise BadStorageProviderParameters(
                 'At least one of the Azure or Backblaze parameter sets must be fully specified.')
 
-    if not (60 <= config.get("websocket_life_time_seconds", 0) <= 60 * 60 * 23):
-        raise WebSocketLifeTimeException('Invalid websocket_life_time_seconds')
+    # if not (60 <= config.get("websocket_life_time_seconds", 0) <= 60 * 60 * 23):
+    #     raise WebSocketLifeTimeException('Invalid websocket_life_time_seconds')
 
     logger = setup_logger(should_dump_logs=should_dump_logs)
     logger.info("\n%s", binance_archiver_logo)
