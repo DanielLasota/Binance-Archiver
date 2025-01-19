@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="second round, first vm" />
+    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="small updates for 6x50 run, turned off message processing etc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/binance_archiver/data_sink_facade.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/data_sink_facade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/binance_archiver/stock_data_sink_configs/almost_production_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stock_data_sink_configs/almost_production_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/binance_archiver/stream_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stream_listener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/binance_archiver/stream_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stream_service.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,329 +77,329 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.binance_archiver/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.algo: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for ArchiverDaemonTests.TestArchiverDaemon.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonGetQueue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonGetQueue.test_given_archiver_daemon_when__get_queue_is_called_then_accurate_queue_hook_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_7_difference_depth_queue_instances_is_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_7_trade_queue_instances_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_global_shutdown_flag_is_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_queues_amount_is_accurate.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_queues_are_set_properly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonRun.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonRun.test_given_archiver_daemon_run_call_when_threads_invocation_then_accurate_set_of_threads_are_started.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_after_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_before_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_during_no_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_during_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonStreamServiceSupervisor.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonStreamServiceSupervisor.test_given_difference_stream_service_supervisor_when_start_then_stream_listeners_differs_couple_of_times.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonStreamServiceSupervisor.test_start_stream_service_supervisor_restarts_on_error.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_get_utc_formatted_timestamp.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_get_utc_timestamp_epoch_milliseconds.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_get_utc_timestamp_epoch_seconds.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_given_get_actual_epoch_timestamp_are_timestamps_in_utc.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_config_has_no_instrument_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_market_type_is_empty_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_not_handled_market_type_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_too_many_markets_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.Test_archiver_daemon_init.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_archiver_daemon.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_exception_handling_allows_loop_continuation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given__get_queue_is_accurate_queue_hook_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_run_call_when_threads_invocation_then_accurate_set_of_threads_are_started.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when__get_queue_is_called_then_accurate_queue_hook_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_7_difference_depth_queue_instances_is_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_7_trade_queue_instances_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_then_global_shutdown_flag_is_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_then_queues_amount_is_accurate.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_then_queues_are_set_properly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_shutdown_method_before_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_shutdown_method_during_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_shutdown_method_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_azure_blob_parameters_with_key_is_none_or_empty_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_config_has_no_instrument_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_difference_depth_stream_listener_when_connected_then_message_is_correctly_passed_to_diff_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_difference_stream_service_supervisor_when_start_then_stream_listeners_differs_couple_of_times.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_get_actual_epoch_timestamp_are_timestamps_actual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_get_actual_epoch_timestamp_are_timestamps_in_utc.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_market_type_is_empty_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_not_handled_market_type_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_stream_listener_when_init_then_stream_listener_initializes_with_valid_parameters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_stream_listener_when_init_with_pairs_amount_of_zero_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_stream_listener_when_init_with_pairs_argument_as_str_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_too_many_markets_then_is_exception_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_trade_stream_listener_when_connected_then_message_is_correctly_passed_to_trade_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_init.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_iteration_count.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_on_close_behaves_as_expected.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_on_error_logs_error.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_on_open_logs_message.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_start_stream_service_supervisor_restarts_on_error.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_timestamps_are_in_utc.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_daemon_when_shutdown_method_during_no_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_daemon_when_shutdown_method_during_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_facade_when_init_then_global_shutdown_flag_is_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_facade_when_init_then_queues_are_set_properly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_facade_when_shutdown_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacadeListenerMode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_given_modify_subscription_when_adding_asset_then_asset_is_added_to_instruments.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_given_modify_subscription_when_removing_asset_then_asset_is_removed_from_instruments.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_handle_command_with_invalid_command_logs_warning.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_modify_subscription_adds_asset_to_instruments.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_modify_subscription_removes_asset_from_instruments.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_data_saver_is_not_initialized_in_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_get_file_name_generates_correct_format.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_blob_parameters_when_initializing_then_blob_service_client_is_initialized.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_data_saver_when_run_then_stream_writers_are_started.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_get_file_name_when_called_then_correct_format_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_no_blob_parameters_when_initializing_then_blob_service_client_is_none.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_process_stream_data_when_queue_has_data_then_data_is_processed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_process_stream_data_when_queue_is_empty_then_no_action_is_taken.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_start_stream_writer_when_called_then_thread_is_started.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_stream_writer_when_shutdown_flag_set_then_exits_loop.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_initialization_with_blob_parameters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_process_stream_data_with_data_in_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_process_stream_data_with_empty_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_run_data_saver_starts_stream_writers.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_stream_writer_processes_data_and_respects_shutdown_flag.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_archiver_facade_initialization_in_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_daemon_when_shutdown_method_during_no_stream_switch_is_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_run_call_when_threads_invoked_then_correct_threads_are_started.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_when_init_then_global_shutdown_flag_is_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_when_init_then_queues_are_set_properly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_when_shutdown_called_then_no_threads_are_left.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_invalid_instruments_config_then_exception_is_raised.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_invalid_market_in_instruments_then_exception_is_raised.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_invalid_websocket_life_time_seconds_then_exception_is_raised.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_valid_config_then_archiver_facade_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_config_has_no_instrument_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_market_type_is_empty_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_not_handled_market_type_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_too_many_markets_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_valid_config_then_archiver_facade_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_archiver_facade_initialization_in_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_attach_and_detach_observers.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_archiver_facade_run_call_when_threads_invoked_then_correct_threads_are_started.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_archiver_facade_when_init_then_global_shutdown_flag_is_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_archiver_facade_when_init_then_queues_are_set_properly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestObserverPattern.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestObserverPattern.test_observer_receives_notifications.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.test_given_queue_pool_when_initialized_then_queues_are_set_properly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.test_given_queue_pool_when_more_than_allowed_trade_queues_created_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.test_queue_pool_initialization_in_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_given_queue_pool_when_get_queue_called_then_returns_correct_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_given_queue_pool_when_more_than_allowed_difference_depth_queues_created_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_given_queue_pool_when_more_than_allowed_trade_queues_created_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_queue_pool_initialization_in_data_sink_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_given_queue_pool_when_get_queue_called_then_returns_correct_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_given_queue_pool_when_more_than_allowed_difference_depth_queues_created_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_given_queue_pool_when_more_than_allowed_trade_queues_created_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_queue_pool_initialization_in_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestDataSinkSnapshotStrategy.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestListenerSnapshotStrategy.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_data_sink_strategy_when_snapshot_received_then_data_saver_methods_called.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_exception_in_get_snapshot_when_snapshot_fetched_then_error_logged_and_no_snapshot_processed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_exception_when_get_snapshot_called_then_none_returned_and_error_logged.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_listener_strategy_when_snapshot_received_then_snapshot_put_into_global_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_shutdown_flag_set_when_daemon_running_then_thread_exits.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_shutdown_flag_set_when_sleep_with_flag_check_called_then_method_exits_early.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_successful_response_when_get_snapshot_called_then_data_and_timestamps_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.test_snapshot_manager_puts_snapshots_into_global_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_given_stream_service_when_init_with_empty_pairs_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_given_stream_service_when_init_with_invalid_pairs_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_stream_service_initialization_with_global_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_stream_service_runs_streams_in_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestTimeUtils.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestTimeUtils.test_given_time_utils_when_getting_utc_formatted_timestamp_then_format_is_correct.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestWhistleblower.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestWhistleblower.test_whistleblower_exits_on_shutdown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestWhistleblower.test_whistleblower_processes_messages_and_notifies_observers.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestSnapshotManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestSnapshotManager.test_init.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSaver.test_given_get_file_name_when_called_then_correct_format_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSaverSender.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSaverSender.test_given_process_stream_data_when_queue_has_data_then_data_is_processed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSinkFacade.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_data_sink_strategy_when_snapshot_received_then_data_saver_methods_called.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_listener_strategy_when_snapshot_received_then_snapshot_put_into_global_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestTimestampsGenerator.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.test_given_blackout_supervisor_when_initialized_then_has_correct_parameters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.test_given_blackout_supervisor_when_no_error_callback_then_raises_exception.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.test_given_blackout_supervisor_when_no_messages_for_max_interval_then_logger_warns.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_are_messages_being_added_to_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_behavior_when_global_queue_is_empty_in_data_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_benchmark.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_checking_size_when_method_invocation_then_result_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_comparison_algorithm_benchmark.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_getting_from_queue_when_method_invocation_then_last_element_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_getting_with_no_wait_from_queue_when_method_invocation_then_last_element_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given__do_they_match_when_comparing_two_different_stream_listeners_throws_then_currently_accepted_stream_id_is_not_changed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given__do_they_match_when_comparing_two_equal_stream_listeners_throws_then_currently_accepted_stream_id_is_changed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_checking_amount_of_instances_when_get_instance_count_invocation_then_amount_is_correct.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_checking_empty_when_method_invocation_then_result_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_clearing_difference_depth_queue_when_invocation_then_qsize_equals_zero.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_sorting_messages_then_dict_is_sorted.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_equal_but_one_asset_is_duplicated_then_method_returns_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_equal_then_method_returns_true.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_not_equal_because_one_asset_is_duplicated_then_method_returns_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_not_equal_then_method_returns_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_difference_depth_queues_when_clear_instances_invocation_then_amount_is_zero.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_difference_depth_queues_when_get_instance_count_invocation_then_amount_is_correct.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_huge_amount_of_stream_listener_changes_when_comparing_message_queues_there_is_at_max_two_compare_structure_dict_keys.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_instances_amount_counter_reset_when_clear_instances_method_invocation_then_amount_is_zero.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_more_than_max_len_is_oldest_element_removed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_more_than_maxlen_is_oldest_element_removed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_processing_message_to_compare_structure_when_removing_event_timestamp_then_output_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_the_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_adding_messages_to_the_full_queues_then_is_last_message_being_removed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_adding_two_different_stream_listeners_message_throws_to_compare_structure_then_structure_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_next_100_ms_throws_is_being_compared_then_structure_is_properly_cleared_with_only_new_message_in_dict.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_putting_message_of_currently_accepted_stream_id_then_message_is_being_added_to_the_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_messages_whilst_changing_and_whilst_usual_working_mode_when_get_nowait_from_queue_then_order_and_amount_of_queue_elements_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_stream_message_and_two_last_throws_are_equal_when_two_listeners_messages_are_being_compared_then_currently_accepted_stream_id_is_changed_and_only_old_stream_listener_messages_are_put_in.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_stream_message_and_two_last_throws_are_not_equal_when_two_listeners_messages_are_being_compared_then_currently_accepted_stream_id_is_not_changed_and_only_old_stream_listener_messages_are_put_in.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_too_many_difference_depth_queue_instances_exists_when_creating_new_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_too_many_difference_depth_queue_instances_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_too_many_difference_depth_queue_instantions_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_different_throws_when_compare_then_method_returns_false.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_equal_throws_does_method_return_true.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_equal_throws_when_compare_two_last_throws_then_method_returns_true.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_throws_does__sort_entries_by_symbol_sort_entries_by_symbol.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_initialization_without_global_queue_in_data_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_initialize_trade_queue_in_data_listener_mode_with_global_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_message_handling_in_data_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_queue_operations_in_data_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_roboczy_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_switching_logic_in_data_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_trade_queue_message_handling_in_data_listener_mode.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.test_given_pretty_printed_message_from_test_when_reformatting_then_mesage_is_in_binance_format.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.test_given_pretty_printed_message_from_test_when_reformatting_then_message_is_in_binance_format.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for difference_depth_queue_tests.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_the_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for fastapi_manager_tests.TestFastApiManager.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestIndividualColumnChecker.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_more_than_one_unique_value_in_pandas_series_when_check_if_is_there_only_one_unique_value_in_series_check_then_false_is_being_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_more_than_one_unique_value_in_pandas_series_when_check_if_is_whole_series_made_of_only_one_expected_value_check_then_false_is_being_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_one_unique_value_in_pandas_series_when_check_if_is_whole_series_made_of_only_one_expected_value_check_then_false_is_being_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_only_one_unique_value_in_pandas_series_when_is_there_only_one_unique_value_in_series_check_then_true_is_being_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_pandas_series_with_non_ascending_values_when_is_each_series_entry_greater_or_equal_to_previous_one_check_then_false_is_being_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_pandas_series_with_non_descending_values_when_is_each_series_entry_greater_or_equal_to_previous_one_check_then_true_is_being_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for scraper_tests.TestScraper.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestArchiverDaemon.test_get_utc_formatted_timestamp.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestArchiverDaemon.test_given_new_websocket_app_is_connection_established.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestArchiverDaemon.test_given_pairs_is_url_correct.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestOther.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_connected_then_message_is_correctly_passed_to_diff_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_last_message_time_epoch_seconds_utc_is_changed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_starts_correctly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_starts_correctly_and_is_being_notifiead.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_starts_correctly_and_is_being_notified.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_message_received_then_supervisor_is_notified.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_websocket_app_close_then_supervisor_is_properly_stopped.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_stream_listener_when_init_then_stream_listener_initializes_with_valid_parameters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_stream_listener_when_init_with_pairs_amount_of_zero_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_stream_listener_when_init_with_pairs_argument_as_str_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_connected_then_error_is_being_logged.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_connected_then_message_is_correctly_passed_to_trade_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_last_message_time_epoch_seconds_utc_is_changed.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_starts_correctly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_starts_correctly_.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_starts_correctly_and_is_being_notified.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_message_income_stops_then_supervisors_sets_flag_to_stop.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_message_received_then_supervisor_is_notified.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_on_close_then_close_message_is_being_logged.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_on_open_then_message_is_being_logged.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_websocket_app_close_then_supervisor_is_properly_stopped.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_difference_depth_stream_listener_when_connected_then_message_is_correctly_passed_to_diff_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_stream_listener_when_init_then_stream_listener_initializes_with_valid_parameters.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_stream_listener_when_init_with_pairs_amount_of_zero_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_stream_listener_when_init_with_pairs_argument_as_str_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_connected_then_error_is_being_logged.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_connected_then_message_is_correctly_passed_to_trade_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_on_close_then_close_message_is_being_logged.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_on_open_then_message_is_being_logged.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for supervised_queue_tests.TestSupervisedQueue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test.archiver_daemon_tests.TestStreamService.test_given_stream_service_when_init_with_empty_pairs_then_exception_is_thrown.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_checking_size_when_method_invocation_then_result_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_getting_with_no_wait_from_queue_when_method_invocation_then_last_element_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_checking_empty_when_method_invocation_then_result_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_clearing_difference_depth_queue_when_invocation_then_qsize_equals_zero.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_data_listener_mode_and_global_queue_when_initializing_trade_queue_then_queue_is_set_to_global_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_data_listener_mode_without_global_queue_when_initializing_trade_queue_then_value_error_is_raised.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_empty_global_queue_in_data_listener_mode_when_checking_queue_then_empty_and_get_nowait_raises_exception.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_getting_from_queue_when_get_nowait_then_last_element_is_returned.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_getting_message_signs_whilst_putting_message_when_get_message_signs_then_signs_are_returned_correctly.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_getting_messages_when_get_nowait_then_qsize_is_zero_and_got_list_is_ok.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_the_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_putting_message_when_putting_message_of_currently_accepted_stream_id_then_message_is_being_added_to_the_queue.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_trade_messages_in_data_listener_mode_when_using_queue_operations_then_operations_reflect_global_queue_state.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for trade_queue_tests.test_given_pretty_printed_message_from_test_when_reformatting_then_message_is_in_binance_format.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_data_quality_analytic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_data_sink.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_listener.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_scraper.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/add-azure-n-backblaze-scraper&quot;,
-    &quot;last.edited.regexp&quot;: &quot;\&quot;E\&quot;:123,&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/daniellasota/PycharmProjects/Binance-Archiver/venv/Lib/site-packages/websocket/_socket.py&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/daniellasota/PycharmProjects/Binance-Archiver/venv/Lib/site-packages/websocket/_socket.py&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.binance_archiver/Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml.algo: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.dockerfile.executor": "Run",
+    "Python tests.pytest for ArchiverDaemonTests.TestArchiverDaemon.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonGetQueue.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonGetQueue.test_given_archiver_daemon_when__get_queue_is_called_then_accurate_queue_hook_returned.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_7_difference_depth_queue_instances_is_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_7_trade_queue_instances_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_global_shutdown_flag_is_false.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_queues_amount_is_accurate.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_archiver_daemon_when_init_then_queues_are_set_properly.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonInit.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonRun.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonRun.test_given_archiver_daemon_run_call_when_threads_invocation_then_accurate_set_of_threads_are_started.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_after_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_before_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_during_no_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonShutdown.test_given_archiver_daemon_when_shutdown_method_during_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonStreamServiceSupervisor.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonStreamServiceSupervisor.test_given_difference_stream_service_supervisor_when_start_then_stream_listeners_differs_couple_of_times.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonStreamServiceSupervisor.test_start_stream_service_supervisor_restarts_on_error.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_get_utc_formatted_timestamp.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_get_utc_timestamp_epoch_milliseconds.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_get_utc_timestamp_epoch_seconds.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestArchiverDaemonTimeUtils.test_given_get_actual_epoch_timestamp_are_timestamps_in_utc.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_config_has_no_instrument_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_market_type_is_empty_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_not_handled_market_type_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.TestLaunchDataSink.test_given_too_many_markets_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.Test_archiver_daemon_init.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_archiver_daemon.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_exception_handling_allows_loop_continuation.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given__get_queue_is_accurate_queue_hook_returned.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_run_call_when_threads_invocation_then_accurate_set_of_threads_are_started.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when__get_queue_is_called_then_accurate_queue_hook_returned.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_7_difference_depth_queue_instances_is_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_7_trade_queue_instances_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_then_global_shutdown_flag_is_false.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_then_queues_amount_is_accurate.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_init_then_queues_are_set_properly.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_shutdown_method_before_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_shutdown_method_during_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_archiver_daemon_when_shutdown_method_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_azure_blob_parameters_with_key_is_none_or_empty_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_config_has_no_instrument_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_difference_depth_stream_listener_when_connected_then_message_is_correctly_passed_to_diff_queue.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_difference_stream_service_supervisor_when_start_then_stream_listeners_differs_couple_of_times.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_get_actual_epoch_timestamp_are_timestamps_actual.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_get_actual_epoch_timestamp_are_timestamps_in_utc.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_market_type_is_empty_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_not_handled_market_type_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_stream_listener_when_init_then_stream_listener_initializes_with_valid_parameters.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_stream_listener_when_init_with_pairs_amount_of_zero_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_stream_listener_when_init_with_pairs_argument_as_str_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_too_many_markets_then_is_exception_thrown.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_given_trade_stream_listener_when_connected_then_message_is_correctly_passed_to_trade_queue.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_init.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_iteration_count.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_on_close_behaves_as_expected.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_on_error_logs_error.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_on_open_logs_message.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_start_stream_service_supervisor_restarts_on_error.executor": "Run",
+    "Python tests.pytest for archiver_daemon_tests.TestArchiverDaemon.test_timestamps_are_in_utc.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_daemon_when_shutdown_method_during_no_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_daemon_when_shutdown_method_during_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_facade_when_init_then_global_shutdown_flag_is_false.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_facade_when_init_then_queues_are_set_properly.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_archiver_facade_when_shutdown_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacade.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestArchiverFacadeListenerMode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_given_modify_subscription_when_adding_asset_then_asset_is_added_to_instruments.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_given_modify_subscription_when_removing_asset_then_asset_is_removed_from_instruments.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_handle_command_with_invalid_command_logs_warning.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_modify_subscription_adds_asset_to_instruments.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestCommandLineInterface.test_modify_subscription_removes_asset_from_instruments.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_data_saver_is_not_initialized_in_listener_mode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_get_file_name_generates_correct_format.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_blob_parameters_when_initializing_then_blob_service_client_is_initialized.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_data_saver_when_run_then_stream_writers_are_started.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_get_file_name_when_called_then_correct_format_is_returned.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_no_blob_parameters_when_initializing_then_blob_service_client_is_none.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_process_stream_data_when_queue_has_data_then_data_is_processed.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_process_stream_data_when_queue_is_empty_then_no_action_is_taken.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_start_stream_writer_when_called_then_thread_is_started.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_given_stream_writer_when_shutdown_flag_set_then_exits_loop.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_initialization_with_blob_parameters.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_process_stream_data_with_data_in_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_process_stream_data_with_empty_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_run_data_saver_starts_stream_writers.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSaver.test_stream_writer_processes_data_and_respects_shutdown_flag.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_archiver_facade_initialization_in_listener_mode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_daemon_when_shutdown_method_during_no_stream_switch_is_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_run_call_when_threads_invoked_then_correct_threads_are_started.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_when_init_then_global_shutdown_flag_is_false.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_when_init_then_queues_are_set_properly.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_archiver_facade_when_shutdown_called_then_no_threads_are_left.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestDataSinkFacade.test_given_send_zip_to_blob_is_true_and_container_name_is_bad_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_invalid_instruments_config_then_exception_is_raised.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_invalid_market_in_instruments_then_exception_is_raised.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_invalid_websocket_life_time_seconds_then_exception_is_raised.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataListener.test_given_valid_config_then_archiver_facade_is_returned.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_config_has_no_instrument_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_market_type_is_empty_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_not_handled_market_type_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_too_many_markets_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestLaunchDataSink.test_given_valid_config_then_archiver_facade_is_returned.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_archiver_facade_initialization_in_listener_mode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_attach_and_detach_observers.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_archiver_facade_run_call_when_threads_invoked_then_correct_threads_are_started.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_archiver_facade_when_init_then_global_shutdown_flag_is_false.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_archiver_facade_when_init_then_queues_are_set_properly.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestListenerFacade.test_given_send_zip_to_blob_is_true_and_azure_blob_parameters_with_key_is_bad_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestObserverPattern.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestObserverPattern.test_observer_receives_notifications.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.test_given_queue_pool_when_initialized_then_queues_are_set_properly.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.test_given_queue_pool_when_more_than_allowed_trade_queues_created_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePool.test_queue_pool_initialization_in_listener_mode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_given_queue_pool_when_get_queue_called_then_returns_correct_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_given_queue_pool_when_more_than_allowed_difference_depth_queues_created_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_given_queue_pool_when_more_than_allowed_trade_queues_created_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolDataSink.test_queue_pool_initialization_in_data_sink_mode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_given_queue_pool_when_get_queue_called_then_returns_correct_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_given_queue_pool_when_more_than_allowed_difference_depth_queues_created_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_given_queue_pool_when_more_than_allowed_trade_queues_created_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestQueuePoolListener.test_queue_pool_initialization_in_listener_mode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestDataSinkSnapshotStrategy.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestListenerSnapshotStrategy.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_data_sink_strategy_when_snapshot_received_then_data_saver_methods_called.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_exception_in_get_snapshot_when_snapshot_fetched_then_error_logged_and_no_snapshot_processed.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_exception_when_get_snapshot_called_then_none_returned_and_error_logged.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_listener_strategy_when_snapshot_received_then_snapshot_put_into_global_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_shutdown_flag_set_when_daemon_running_then_thread_exits.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_shutdown_flag_set_when_sleep_with_flag_check_called_then_method_exits_early.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_successful_response_when_get_snapshot_called_then_data_and_timestamps_returned.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestSnapshotManager.test_snapshot_manager_puts_snapshots_into_global_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_given_stream_service_when_init_with_empty_pairs_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_given_stream_service_when_init_with_invalid_pairs_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_stream_service_initialization_with_global_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestStreamService.test_stream_service_runs_streams_in_listener_mode.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestTimeUtils.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestTimeUtils.test_given_time_utils_when_getting_utc_formatted_timestamp_then_format_is_correct.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestWhistleblower.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestWhistleblower.test_whistleblower_exits_on_shutdown.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.TestWhistleblower.test_whistleblower_processes_messages_and_notifies_observers.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestArchiverFacade.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestSnapshotManager.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.archiver_daemon_tests.TestSnapshotManager.test_init.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSaver.test_given_get_file_name_when_called_then_correct_format_is_returned.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSaverSender.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSaverSender.test_given_process_stream_data_when_queue_has_data_then_data_is_processed.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestDataSinkFacade.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_data_sink_strategy_when_snapshot_received_then_data_saver_methods_called.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.TestSnapshotManager.test_given_listener_strategy_when_snapshot_received_then_snapshot_put_into_global_queue.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestSnapshotManager.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.TestTimestampsGenerator.executor": "Run",
+    "Python tests.pytest for binance_archiver.test.binance_archiver_facade_tests.TestArchiverFacade.executor": "Run",
+    "Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.executor": "Run",
+    "Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.test_given_blackout_supervisor_when_initialized_then_has_correct_parameters.executor": "Run",
+    "Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.test_given_blackout_supervisor_when_no_error_callback_then_raises_exception.executor": "Run",
+    "Python tests.pytest for blackout_supervisor_tests.TestBlackoutSupervisor.test_given_blackout_supervisor_when_no_messages_for_max_interval_then_logger_warns.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_are_messages_being_added_to_queue.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_behavior_when_global_queue_is_empty_in_data_listener_mode.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_benchmark.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_checking_size_when_method_invocation_then_result_is_ok.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_comparison_algorithm_benchmark.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_getting_from_queue_when_method_invocation_then_last_element_is_returned.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_getting_with_no_wait_from_queue_when_method_invocation_then_last_element_is_returned.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given__do_they_match_when_comparing_two_different_stream_listeners_throws_then_currently_accepted_stream_id_is_not_changed.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given__do_they_match_when_comparing_two_equal_stream_listeners_throws_then_currently_accepted_stream_id_is_changed.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_checking_amount_of_instances_when_get_instance_count_invocation_then_amount_is_correct.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_checking_empty_when_method_invocation_then_result_is_ok.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_clearing_difference_depth_queue_when_invocation_then_qsize_equals_zero.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_sorting_messages_then_dict_is_sorted.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_equal_but_one_asset_is_duplicated_then_method_returns_false.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_equal_then_method_returns_true.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_not_equal_because_one_asset_is_duplicated_then_method_returns_false.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_comparing_two_throws_when_throws_are_not_equal_then_method_returns_false.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_difference_depth_queues_when_clear_instances_invocation_then_amount_is_zero.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_difference_depth_queues_when_get_instance_count_invocation_then_amount_is_correct.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_huge_amount_of_stream_listener_changes_when_comparing_message_queues_there_is_at_max_two_compare_structure_dict_keys.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_instances_amount_counter_reset_when_clear_instances_method_invocation_then_amount_is_zero.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_more_than_max_len_is_oldest_element_removed.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_more_than_maxlen_is_oldest_element_removed.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_processing_message_to_compare_structure_when_removing_event_timestamp_then_output_is_ok.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_queue.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_the_queue.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_adding_messages_to_the_full_queues_then_is_last_message_being_removed.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_adding_two_different_stream_listeners_message_throws_to_compare_structure_then_structure_is_ok.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_next_100_ms_throws_is_being_compared_then_structure_is_properly_cleared_with_only_new_message_in_dict.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_message_when_putting_message_of_currently_accepted_stream_id_then_message_is_being_added_to_the_queue.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_messages_whilst_changing_and_whilst_usual_working_mode_when_get_nowait_from_queue_then_order_and_amount_of_queue_elements_is_ok.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_stream_message_and_two_last_throws_are_equal_when_two_listeners_messages_are_being_compared_then_currently_accepted_stream_id_is_changed_and_only_old_stream_listener_messages_are_put_in.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_putting_stream_message_and_two_last_throws_are_not_equal_when_two_listeners_messages_are_being_compared_then_currently_accepted_stream_id_is_not_changed_and_only_old_stream_listener_messages_are_put_in.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_too_many_difference_depth_queue_instances_exists_when_creating_new_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_too_many_difference_depth_queue_instances_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_too_many_difference_depth_queue_instantions_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_different_throws_when_compare_then_method_returns_false.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_equal_throws_does_method_return_true.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_equal_throws_when_compare_two_last_throws_then_method_returns_true.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_given_two_throws_does__sort_entries_by_symbol_sort_entries_by_symbol.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_initialization_without_global_queue_in_data_listener_mode.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_initialize_trade_queue_in_data_listener_mode_with_global_queue.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_message_handling_in_data_listener_mode.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_queue_operations_in_data_listener_mode.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_roboczy_test.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_switching_logic_in_data_listener_mode.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.TestDifferenceDepthQueue.test_trade_queue_message_handling_in_data_listener_mode.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.test_given_pretty_printed_message_from_test_when_reformatting_then_mesage_is_in_binance_format.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.test_given_pretty_printed_message_from_test_when_reformatting_then_message_is_in_binance_format.executor": "Run",
+    "Python tests.pytest for difference_depth_queue_tests.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_the_queue.executor": "Run",
+    "Python tests.pytest for fastapi_manager_tests.TestFastApiManager.test.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestIndividualColumnChecker.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_more_than_one_unique_value_in_pandas_series_when_check_if_is_there_only_one_unique_value_in_series_check_then_false_is_being_returned.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_more_than_one_unique_value_in_pandas_series_when_check_if_is_whole_series_made_of_only_one_expected_value_check_then_false_is_being_returned.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_one_unique_value_in_pandas_series_when_check_if_is_whole_series_made_of_only_one_expected_value_check_then_false_is_being_returned.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_only_one_unique_value_in_pandas_series_when_is_there_only_one_unique_value_in_series_check_then_true_is_being_returned.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_pandas_series_with_non_ascending_values_when_is_each_series_entry_greater_or_equal_to_previous_one_check_then_false_is_being_returned.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestIndividualColumnChecker.test_given_pandas_series_with_non_descending_values_when_is_each_series_entry_greater_or_equal_to_previous_one_check_then_true_is_being_returned.executor": "Run",
+    "Python tests.pytest for scraper_tests.TestScraper.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestArchiverDaemon.test_get_utc_formatted_timestamp.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestArchiverDaemon.test_given_new_websocket_app_is_connection_established.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestArchiverDaemon.test_given_pairs_is_url_correct.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestOther.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_connected_then_message_is_correctly_passed_to_diff_queue.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_last_message_time_epoch_seconds_utc_is_changed.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_starts_correctly.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_starts_correctly_and_is_being_notifiead.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_init_then_supervisor_starts_correctly_and_is_being_notified.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_message_received_then_supervisor_is_notified.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_difference_depth_stream_listener_when_websocket_app_close_then_supervisor_is_properly_stopped.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_stream_listener_when_init_then_stream_listener_initializes_with_valid_parameters.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_stream_listener_when_init_with_pairs_amount_of_zero_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_stream_listener_when_init_with_pairs_argument_as_str_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_connected_then_error_is_being_logged.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_connected_then_message_is_correctly_passed_to_trade_queue.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_last_message_time_epoch_seconds_utc_is_changed.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_starts_correctly.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_starts_correctly_.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_init_then_supervisor_starts_correctly_and_is_being_notified.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_message_income_stops_then_supervisors_sets_flag_to_stop.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_message_received_then_supervisor_is_notified.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_on_close_then_close_message_is_being_logged.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_on_open_then_message_is_being_logged.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListener.test_given_trade_stream_listener_when_websocket_app_close_then_supervisor_is_properly_stopped.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_difference_depth_stream_listener_when_connected_then_message_is_correctly_passed_to_diff_queue.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_stream_listener_when_init_then_stream_listener_initializes_with_valid_parameters.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_stream_listener_when_init_with_pairs_amount_of_zero_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_stream_listener_when_init_with_pairs_argument_as_str_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_connected_then_error_is_being_logged.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_connected_then_message_is_correctly_passed_to_trade_queue.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_on_close_then_close_message_is_being_logged.executor": "Run",
+    "Python tests.pytest for stream_listener_tests.TestStreamListenerNew.test_given_trade_stream_listener_when_on_open_then_message_is_being_logged.executor": "Run",
+    "Python tests.pytest for supervised_queue_tests.TestSupervisedQueue.executor": "Run",
+    "Python tests.pytest for test.archiver_daemon_tests.TestStreamService.test_given_stream_service_when_init_with_empty_pairs_then_exception_is_thrown.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_checking_size_when_method_invocation_then_result_is_ok.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_getting_with_no_wait_from_queue_when_method_invocation_then_last_element_is_returned.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_checking_empty_when_method_invocation_then_result_is_ok.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_clearing_difference_depth_queue_when_invocation_then_qsize_equals_zero.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_data_listener_mode_and_global_queue_when_initializing_trade_queue_then_queue_is_set_to_global_queue.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_data_listener_mode_without_global_queue_when_initializing_trade_queue_then_value_error_is_raised.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_empty_global_queue_in_data_listener_mode_when_checking_queue_then_empty_and_get_nowait_raises_exception.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_getting_from_queue_when_get_nowait_then_last_element_is_returned.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_getting_message_signs_whilst_putting_message_when_get_message_signs_then_signs_are_returned_correctly.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_getting_messages_when_get_nowait_then_qsize_is_zero_and_got_list_is_ok.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_putting_message_from_no_longer_accepted_stream_listener_id_when_try_to_put_then_message_is_not_added_to_the_queue.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_putting_message_when_putting_message_of_currently_accepted_stream_id_then_message_is_being_added_to_the_queue.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.TestTradeQueue.test_given_trade_messages_in_data_listener_mode_when_using_queue_operations_then_operations_reflect_global_queue_state.executor": "Run",
+    "Python tests.pytest for trade_queue_tests.test_given_pretty_printed_message_from_test_when_reformatting_then_message_is_in_binance_format.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_data_quality_analytic.executor": "Run",
+    "Python.main_data_sink.executor": "Run",
+    "Python.main_listener.executor": "Run",
+    "Python.main_scraper.executor": "Run",
+    "Python.test_app.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/add-azure-n-backblaze-scraper",
+    "last.edited.regexp": "\"E\":123,",
+    "last_opened_file_path": "C:/Users/daniellasota/PycharmProjects/Binance-Archiver/venv/Lib/site-packages/websocket/_socket.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "two.files.diff.last.used.file": "C:/Users/daniellasota/PycharmProjects/Binance-Archiver/venv/Lib/site-packages/websocket/_socket.py",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\daniel\PycharmProjects\Binance-Archiver\binance_archiver" />
@@ -560,70 +566,6 @@
       <workItem from="1713702840071" duration="1174000" />
       <workItem from="1713862483109" duration="361000" />
       <workItem from="1713896144663" duration="1232000" />
-    </task>
-    <task id="LOCAL-00098" summary="feat: New production_config.json.json">
-      <option name="closed" value="true" />
-      <created>1727233060669</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1727233060669</updated>
-    </task>
-    <task id="LOCAL-00099" summary="feat: New production_config.json.json, minor changes">
-      <option name="closed" value="true" />
-      <created>1727256066288</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1727256066289</updated>
-    </task>
-    <task id="LOCAL-00100" summary="perf: difference_depth_queue.py json to orjson refactor + minor if refactors">
-      <option name="closed" value="true" />
-      <created>1727265547871</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1727265547871</updated>
-    </task>
-    <task id="LOCAL-00101" summary="build: Requirements update, build update">
-      <option name="closed" value="true" />
-      <created>1727267890632</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1727267890632</updated>
-    </task>
-    <task id="LOCAL-00102" summary="build: Requirements update, build update">
-      <option name="closed" value="true" />
-      <created>1727267973865</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1727267973865</updated>
-    </task>
-    <task id="LOCAL-00103" summary="build: Requirements update, build update">
-      <option name="closed" value="true" />
-      <created>1727269035222</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1727269035222</updated>
-    </task>
-    <task id="LOCAL-00104" summary="feat: BackBlaze handle add">
-      <option name="closed" value="true" />
-      <created>1727385496872</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1727385496872</updated>
-    </task>
-    <task id="LOCAL-00105" summary="chore: configs update">
-      <option name="closed" value="true" />
-      <created>1727388305187</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1727388305187</updated>
     </task>
     <task id="LOCAL-00106" summary="chore: configs update">
       <option name="closed" value="true" />
@@ -953,7 +895,71 @@
       <option name="project" value="LOCAL" />
       <updated>1737106954754</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="second round, first vm">
+      <option name="closed" value="true" />
+      <created>1737107324326</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1737107324326</updated>
+    </task>
+    <task id="LOCAL-00148" summary="second round, first vm">
+      <option name="closed" value="true" />
+      <created>1737107495182</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1737107495182</updated>
+    </task>
+    <task id="LOCAL-00149" summary="second round, second vm">
+      <option name="closed" value="true" />
+      <created>1737108879041</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1737108879041</updated>
+    </task>
+    <task id="LOCAL-00150" summary="second round, second vm">
+      <option name="closed" value="true" />
+      <created>1737109977007</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1737109977007</updated>
+    </task>
+    <task id="LOCAL-00151" summary="small updates for 6x50 run, turned off message processing etc">
+      <option name="closed" value="true" />
+      <created>1737259889712</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1737259889713</updated>
+    </task>
+    <task id="LOCAL-00152" summary="small updates for 6x50 run, turned off message processing etc">
+      <option name="closed" value="true" />
+      <created>1737259923380</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1737259923380</updated>
+    </task>
+    <task id="LOCAL-00153" summary="small updates for 6x50 run, turned off message processing etc">
+      <option name="closed" value="true" />
+      <created>1737259975287</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1737259975287</updated>
+    </task>
+    <task id="LOCAL-00154" summary="small updates for 6x50 run, turned off message processing etc">
+      <option name="closed" value="true" />
+      <created>1737260232996</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1737260232996</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1013,8 +1019,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: final update of minor things, launching" />
-    <MESSAGE value="refactor: scraper.py refactor and optimize" />
     <MESSAGE value="refactor: scraper.py refactor" />
     <MESSAGE value="refactor: scraper.py connection params refactor" />
     <MESSAGE value="refactor: scraper.py single column check methods with tests" />
@@ -1038,7 +1042,9 @@
     <MESSAGE value="feat: temp turn off trade streams" />
     <MESSAGE value="fix: improvements" />
     <MESSAGE value="second round, first vm" />
-    <option name="LAST_COMMIT_MESSAGE" value="second round, first vm" />
+    <MESSAGE value="second round, second vm" />
+    <MESSAGE value="small updates for 6x50 run, turned off message processing etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="small updates for 6x50 run, turned off message processing etc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

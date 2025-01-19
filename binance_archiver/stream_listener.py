@@ -11,7 +11,7 @@ from binance_archiver.exceptions import WrongListInstanceException, PairsLengthE
 from binance_archiver.enum_.market_enum import Market
 from binance_archiver.stream_id import StreamId
 from binance_archiver.enum_.stream_type_enum import StreamType
-from binance_archiver.blackout_supervisor import BlackoutSupervisor
+# from binance_archiver.blackout_supervisor import BlackoutSupervisor
 from binance_archiver.trade_queue import TradeQueue
 from binance_archiver.url_factory import URLFactory
 
@@ -32,7 +32,7 @@ class StreamListener:
     def __init__(
         self,
         logger: logging.Logger,
-        queue: TradeQueue | DifferenceDepthQueue,
+        # queue: TradeQueue | DifferenceDepthQueue,
         pairs: list[str],
         stream_type: StreamType,
         market: Market
@@ -44,15 +44,20 @@ class StreamListener:
             raise PairsLengthException('pairs len is zero')
 
         self.logger = logger
-        self.queue = queue
+        # self.queue = queue
         self.pairs = pairs
         self.stream_type = stream_type
         self.market = market
 
         self.id: StreamId = StreamId(pairs=pairs)
-        self.websocket_app: WebSocketApp = self._construct_websocket_app(self.queue, self.pairs, self.stream_type, self.market)
+        self.websocket_app: WebSocketApp = self._construct_websocket_app(
+            # self.queue,
+            self.pairs,
+            self.stream_type,
+            self.market
+        )
         self.thread: threading.Thread | None = None
-        self._blackout_supervisor: BlackoutSupervisor
+        # self._blackout_supervisor: BlackoutSupervisor
 
     def start_websocket_app(self):
         self.thread = threading.Thread(
@@ -61,7 +66,7 @@ class StreamListener:
             name=f'websocket app thread {self.stream_type} {self.market} {self.id.start_timestamp}'
         )
         self.thread.start()
-        self._blackout_supervisor.run()
+        # self._blackout_supervisor.run()
 
     def restart_websocket_app(self):
         self.websocket_app.close()
@@ -125,20 +130,20 @@ class StreamListener:
 
     def _construct_websocket_app(
         self,
-        queue: DifferenceDepthQueue | TradeQueue,
+        # queue: DifferenceDepthQueue | TradeQueue,
         pairs: list[str],
         stream_type: StreamType,
         market: Market
     ) -> WebSocketApp:
 
-        self._blackout_supervisor = BlackoutSupervisor(
-            stream_type=stream_type,
-            market=market,
-            check_interval_in_seconds=5,
-            max_interval_without_messages_in_seconds=20 if market is Market.COIN_M_FUTURES else 15,
-            on_error_callback=lambda: self.restart_websocket_app(),
-            logger=self.logger
-        )
+        # self._blackout_supervisor = BlackoutSupervisor(
+        #     stream_type=stream_type,
+        #     market=market,
+        #     check_interval_in_seconds=5,
+        #     max_interval_without_messages_in_seconds=20 if market is Market.COIN_M_FUTURES else 15,
+        #     on_error_callback=lambda: self.restart_websocket_app(),
+        #     logger=self.logger
+        # )
 
         stream_url_methods = {
             StreamType.DIFFERENCE_DEPTH_STREAM: URLFactory.get_difference_depth_stream_url,
@@ -159,7 +164,8 @@ class StreamListener:
             #         message=message,
             #         timestamp_of_receive=timestamp_of_receive
             #     )
-            self._blackout_supervisor.notify()
+            # self._blackout_supervisor.notify()
+            ...
 
         def _on_trade_message(ws, message):
             # self.logger.info(f"self.id.start_timestamp: {self.id.start_timestamp} {market} {stream_type}: {message}")
@@ -172,7 +178,8 @@ class StreamListener:
             #         message=message,
             #         timestamp_of_receive=timestamp_of_receive
             #     )
-            self._blackout_supervisor.notify()
+            # self._blackout_supervisor.notify()
+            ...
 
         def _on_error(ws, error):
             self.logger.error(f"_error: {market} {stream_type} {self.id.start_timestamp}: {error} "
@@ -183,7 +190,7 @@ class StreamListener:
                 f"_on_close: {market} {stream_type} {self.id.start_timestamp}"
                 f": WebSocket connection closed, {close_msg} (code: {close_status_code})"
             )
-            self._blackout_supervisor.shutdown_supervisor()
+            # self._blackout_supervisor.shutdown_supervisor()
 
         def _on_ping(ws, message: str, *args, **kwargs):
             self.logger.debug(f'_on_ping: {market} {stream_type} ping has been received'

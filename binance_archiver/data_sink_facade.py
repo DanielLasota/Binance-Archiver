@@ -120,39 +120,39 @@ class DataSinkFacade:
     ) -> None:
         self.config = config
         self.logger = logger
-        self.azure_blob_parameters_with_key = azure_blob_parameters_with_key
-        self.azure_container_name = azure_container_name
-        self.backblaze_s3_parameters = backblaze_s3_parameters
-        self.backblaze_bucket_name = backblaze_bucket_name
-        self.instruments = config["instruments"]
+        # self.azure_blob_parameters_with_key = azure_blob_parameters_with_key
+        # self.azure_container_name = azure_container_name
+        # self.backblaze_s3_parameters = backblaze_s3_parameters
+        # self.backblaze_bucket_name = backblaze_bucket_name
+        # self.instruments = config["instruments"]
         self.global_shutdown_flag = threading.Event()
-        self.queue_pool = QueuePoolDataSink()
+        # self.queue_pool = QueuePoolDataSink()
 
         self.stream_service = StreamService(
             config=self.config,
             logger=self.logger,
-            queue_pool=self.queue_pool,
+            # queue_pool=self.queue_pool,
             global_shutdown_flag=self.global_shutdown_flag
         )
 
-        self.stream_data_saver_and_sender = StreamDataSaverAndSender(
-            logger=self.logger,
-            config=self.config,
-            azure_blob_parameters_with_key=self.azure_blob_parameters_with_key,
-            azure_container_name=self.azure_container_name,
-            backblaze_s3_parameters=self.backblaze_s3_parameters,
-            backblaze_bucket_name=self.backblaze_bucket_name,
-            global_shutdown_flag=self.global_shutdown_flag
-        )
+        # self.stream_data_saver_and_sender = StreamDataSaverAndSender(
+        #     logger=self.logger,
+        #     config=self.config,
+        #     azure_blob_parameters_with_key=self.azure_blob_parameters_with_key,
+        #     azure_container_name=self.azure_container_name,
+        #     backblaze_s3_parameters=self.backblaze_s3_parameters,
+        #     backblaze_bucket_name=self.backblaze_bucket_name,
+        #     global_shutdown_flag=self.global_shutdown_flag
+        # )
+        #
+        # self.command_line_interface = CommandLineInterface(
+        #     config=self.config,
+        #     logger=self.logger,
+        #     stream_service=self.stream_service
+        # )
 
-        self.command_line_interface = CommandLineInterface(
-            config=self.config,
-            logger=self.logger,
-            stream_service=self.stream_service
-        )
-
-        self.fast_api_manager = FastAPIManager()
-        self.fast_api_manager.set_callback(self.command_line_interface.handle_command)
+        # self.fast_api_manager = FastAPIManager()
+        # self.fast_api_manager.set_callback(self.command_line_interface.handle_command)
 
         # snapshot_strategy = DataSinkSnapshotStrategy(
         #     data_saver=self.data_writer_sender,
@@ -169,20 +169,20 @@ class DataSinkFacade:
         # )
 
     def run(self) -> None:
-        dump_path = self.config.get("dump_path", "dump/")
+        # dump_path = self.config.get("dump_path", "dump/")
 
         self.stream_service.run_streams()
 
-        self.fast_api_manager.run()
+        # self.fast_api_manager.run()
 
-        self.stream_data_saver_and_sender.run_data_saver(
-            queue_pool=self.queue_pool,
-            dump_path=dump_path,
-            file_duration_seconds=self.config["file_duration_seconds"],
-            save_to_json=self.config["save_to_json"],
-            save_to_zip=self.config["save_to_zip"],
-            send_zip_to_blob=self.config["send_zip_to_blob"]
-        )
+        # self.stream_data_saver_and_sender.run_data_saver(
+        #     queue_pool=self.queue_pool,
+        #     dump_path=dump_path,
+        #     file_duration_seconds=self.config["file_duration_seconds"],
+        #     save_to_json=self.config["save_to_json"],
+        #     save_to_zip=self.config["save_to_zip"],
+        #     send_zip_to_blob=self.config["send_zip_to_blob"]
+        # )
 
         # self.snapshot_manager.run_snapshots(dump_path=dump_path)
 
