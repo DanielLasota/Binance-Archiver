@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="small updates for 6x50 run, turned off message processing etc">
+    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="totally lightweight boot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binance_archiver/data_sink_facade.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/data_sink_facade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binance_archiver/stock_data_sink_configs/almost_production_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stock_data_sink_configs/almost_production_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/binance_archiver/main_data_sink.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/main_data_sink.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binance_archiver/stream_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stream_listener.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/binance_archiver/stream_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stream_service.py" afterDir="false" />
     </list>
@@ -567,14 +567,6 @@
       <workItem from="1713862483109" duration="361000" />
       <workItem from="1713896144663" duration="1232000" />
     </task>
-    <task id="LOCAL-00106" summary="chore: configs update">
-      <option name="closed" value="true" />
-      <created>1727388351243</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1727388351243</updated>
-    </task>
     <task id="LOCAL-00107" summary="chore: minor updates">
       <option name="closed" value="true" />
       <created>1727396409887</created>
@@ -959,7 +951,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737260232996</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="totally lightweight boot">
+      <option name="closed" value="true" />
+      <created>1737314926849</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1737314926849</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1019,7 +1019,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: scraper.py refactor" />
     <MESSAGE value="refactor: scraper.py connection params refactor" />
     <MESSAGE value="refactor: scraper.py single column check methods with tests" />
     <MESSAGE value="refactor: stream_type_enum.py refactor prior to official docs" />
@@ -1044,7 +1043,8 @@
     <MESSAGE value="second round, first vm" />
     <MESSAGE value="second round, second vm" />
     <MESSAGE value="small updates for 6x50 run, turned off message processing etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="small updates for 6x50 run, turned off message processing etc" />
+    <MESSAGE value="totally lightweight boot" />
+    <option name="LAST_COMMIT_MESSAGE" value="totally lightweight boot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
