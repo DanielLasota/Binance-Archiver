@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="even more lightweight boot">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="even more lightweight boot" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,12 +49,12 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="d414c72c-e4ff-48aa-85f5-72e3dfe37644" />
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DanielLasota/Binance-Archiver.git&quot;,
-    &quot;accountId&quot;: &quot;cad7280d-26bd-4f6b-b1c3-ac91d2fea0f1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DanielLasota/Binance-Archiver.git",
+    "accountId": "d414c72c-e4ff-48aa-85f5-72e3dfe37644"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/venv/Lib/site-packages/azure/keyvault/secrets/_shared/client_base.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/venv/Lib/site-packages/dotenv/main.py" root0="SKIP_INSPECTION" />
@@ -563,14 +561,6 @@
       <workItem from="1713862483109" duration="361000" />
       <workItem from="1713896144663" duration="1232000" />
     </task>
-    <task id="LOCAL-00108" summary="refactor: Minor binance_archiver_facade.py refactor">
-      <option name="closed" value="true" />
-      <created>1727426858425</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1727426858426</updated>
-    </task>
     <task id="LOCAL-00109" summary="feat: data scraper init commit">
       <option name="closed" value="true" />
       <created>1727524744650</created>
@@ -955,7 +945,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737326108738</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="even more lightweight boot">
+      <option name="closed" value="true" />
+      <created>1737377500467</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1737377500467</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
