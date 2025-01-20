@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="even more lightweight boot" />
+    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="even more lightweight boot">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +33,12 @@
         </map>
       </branch-storage>
     </excluded-from-favorite>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Daniel Lasota &lt;slasher.root@gmail.com&gt;" />
+        <option value="Daniel Lasota &lt;grossmann.root@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="1138d88b37fff6fb3fc25bfdcb4028563cd2f401" />
@@ -561,30 +569,6 @@
       <workItem from="1713862483109" duration="361000" />
       <workItem from="1713896144663" duration="1232000" />
     </task>
-    <task id="LOCAL-00109" summary="feat: data scraper init commit">
-      <option name="closed" value="true" />
-      <created>1727524744650</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1727524744650</updated>
-    </task>
-    <task id="LOCAL-00110" summary="feat: New Command for changing websocket life time seconds">
-      <option name="closed" value="true" />
-      <created>1727605564218</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1727605564218</updated>
-    </task>
-    <task id="LOCAL-00111" summary="feat: New Command for changing file durations seconds">
-      <option name="closed" value="true" />
-      <created>1727609357221</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1727609357221</updated>
-    </task>
     <task id="LOCAL-00112" summary="feat: New Command for changing snapshot intervals">
       <option name="closed" value="true" />
       <created>1727613258865</created>
@@ -953,7 +937,31 @@
       <option name="project" value="LOCAL" />
       <updated>1737377500467</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="even more lightweight boot">
+      <option name="closed" value="true" />
+      <created>1737377563071</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1737377563071</updated>
+    </task>
+    <task id="LOCAL-00159" summary="even more lightweight boot">
+      <option name="closed" value="true" />
+      <created>1737377620467</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1737377620467</updated>
+    </task>
+    <task id="LOCAL-00160" summary="even more lightweight boot">
+      <option name="closed" value="true" />
+      <created>1737377851734</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1737377851734</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
