@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="totally lightweight boot">
+    <list default="true" id="9db54f06-b5e9-410f-aa1a-e8034e427035" name="Changes" comment="even more lightweight boot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binance_archiver/data_sink_facade.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/data_sink_facade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binance_archiver/main_data_sink.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/main_data_sink.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binance_archiver/stream_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stream_listener.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binance_archiver/stream_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/binance_archiver/stream_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,7 +391,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "two.files.diff.last.used.file": "C:/Users/daniellasota/PycharmProjects/Binance-Archiver/venv/Lib/site-packages/websocket/_socket.py",
     "vue.rearranger.settings.migration": "true"
   }
@@ -566,14 +562,6 @@
       <workItem from="1713702840071" duration="1174000" />
       <workItem from="1713862483109" duration="361000" />
       <workItem from="1713896144663" duration="1232000" />
-    </task>
-    <task id="LOCAL-00107" summary="chore: minor updates">
-      <option name="closed" value="true" />
-      <created>1727396409887</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1727396409887</updated>
     </task>
     <task id="LOCAL-00108" summary="refactor: Minor binance_archiver_facade.py refactor">
       <option name="closed" value="true" />
@@ -959,7 +947,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737314926849</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="even more lightweight boot">
+      <option name="closed" value="true" />
+      <created>1737326108738</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1737326108738</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1019,7 +1015,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: scraper.py connection params refactor" />
     <MESSAGE value="refactor: scraper.py single column check methods with tests" />
     <MESSAGE value="refactor: stream_type_enum.py refactor prior to official docs" />
     <MESSAGE value="refactor: get_file_name refactor" />
@@ -1044,7 +1039,8 @@
     <MESSAGE value="second round, second vm" />
     <MESSAGE value="small updates for 6x50 run, turned off message processing etc" />
     <MESSAGE value="totally lightweight boot" />
-    <option name="LAST_COMMIT_MESSAGE" value="totally lightweight boot" />
+    <MESSAGE value="even more lightweight boot" />
+    <option name="LAST_COMMIT_MESSAGE" value="even more lightweight boot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
