@@ -148,7 +148,7 @@ if __name__ == "__main__":
        "save_to_zip":False,
        "send_zip_to_blob":False,
        "snapshot_fetcher_interval_seconds":3600,
-       "websocket_life_time_seconds":999999999999
+       "websocket_life_time_seconds":99999999999
     }
 
     data_sink = launch_data_sink(
