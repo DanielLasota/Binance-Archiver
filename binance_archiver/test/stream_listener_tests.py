@@ -5,7 +5,7 @@ import threading
 import pytest
 import websocket
 
-from binance_archiver.binance_archiver_facade import QueuePoolDataSink, QueuePoolListener
+from binance_archiver.queue_pool import QueuePoolListener, QueuePoolDataSink
 from binance_archiver.difference_depth_queue import DifferenceDepthQueue
 from binance_archiver.enum_.market_enum import Market
 from binance_archiver.setup_logger import setup_logger
@@ -54,12 +54,12 @@ class TestStreamListener:
             market = Market[market_str.upper()]
             pairs = instruments[market_str]
 
-            queue = queue_pool.get_queue(market, StreamType.DIFFERENCE_DEPTH)
+            queue = queue_pool.get_queue(market, StreamType.DIFFERENCE_DEPTH_STREAM)
             difference_depth_stream_listener = StreamListener(
                 logger=logger,
                 queue=queue,
                 pairs=pairs,
-                stream_type=StreamType.DIFFERENCE_DEPTH,
+                stream_type=StreamType.DIFFERENCE_DEPTH_STREAM,
                 market=market
             )
 
@@ -71,12 +71,12 @@ class TestStreamListener:
             assert difference_depth_stream_listener.websocket_app.on_message.__name__ == "_on_difference_depth_message", \
                 "on_message should be assigned to _on_difference_depth_message when stream_type is DIFFERENCE_DEPTH"
 
-            queue = queue_pool.get_queue(market, StreamType.TRADE)
+            queue = queue_pool.get_queue(market, StreamType.TRADE_STREAM)
             trade_stream_listener = StreamListener(
                 logger=logger,
                 queue=queue,
                 pairs=pairs,
-                stream_type=StreamType.TRADE,
+                stream_type=StreamType.TRADE_STREAM,
                 market=market
             )
 
@@ -114,12 +114,12 @@ class TestStreamListener:
         queue_pool = QueuePoolDataSink()
 
         with pytest.raises(WrongListInstanceException) as excinfo:
-            queue = queue_pool.get_queue(Market.SPOT, StreamType.DIFFERENCE_DEPTH)
+            queue = queue_pool.get_queue(Market.SPOT, StreamType.DIFFERENCE_DEPTH_STREAM)
             stream_listener = StreamListener(
                 logger=logger,
                 queue=queue,
                 pairs=instruments['spot'][0],  # Incorrect type as intended to be should be a list
-                stream_type=StreamType.DIFFERENCE_DEPTH,
+                stream_type=StreamType.DIFFERENCE_DEPTH_STREAM,
                 market=Market.SPOT
             )
 
@@ -149,12 +149,12 @@ class TestStreamListener:
 
         with pytest.raises(PairsLengthException) as excinfo:
             pairs = instruments['spot']
-            queue = queue_pool.get_queue(Market.SPOT, StreamType.DIFFERENCE_DEPTH)
+            queue = queue_pool.get_queue(Market.SPOT, StreamType.DIFFERENCE_DEPTH_STREAM)
             stream_listener = StreamListener(
                 logger=logger,
                 queue=queue,
                 pairs=pairs,
-                stream_type=StreamType.DIFFERENCE_DEPTH,
+                stream_type=StreamType.DIFFERENCE_DEPTH_STREAM,
                 market=Market.SPOT
             )
 
@@ -170,7 +170,7 @@ class TestStreamListener:
             logger=setup_logger(),
             queue=queue,
             pairs=pairs,
-            stream_type=StreamType.TRADE,
+            stream_type=StreamType.TRADE_STREAM,
             market=Market.SPOT
         )
 
@@ -191,7 +191,7 @@ class TestStreamListener:
             logger=setup_logger(),
             queue=queue,
             pairs=pairs,
-            stream_type=StreamType.TRADE,
+            stream_type=StreamType.TRADE_STREAM,
             market=Market.SPOT
         )
 
@@ -218,7 +218,7 @@ class TestStreamListener:
             logger=logger,
             queue=queue,
             pairs=pairs,
-            stream_type=StreamType.TRADE,
+            stream_type=StreamType.TRADE_STREAM,
             market=Market.SPOT)
 
         error_message = "Test error"
@@ -255,15 +255,14 @@ class TestStreamListener:
             logger=logger,
             queue=trade_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.TRADE,
+            stream_type=StreamType.TRADE_STREAM,
             market=Market.SPOT
         )
 
         trade_queue.currently_accepted_stream_id = trade_stream_listener.id
 
         trade_stream_listener_thread = threading.Thread(
-            target=trade_stream_listener.websocket_app.run_forever,
-            daemon=True
+            target=trade_stream_listener.websocket_app.run_forever
         )
 
         trade_stream_listener_thread.start()
@@ -307,15 +306,14 @@ class TestStreamListener:
             logger=logger,
             queue=difference_depth_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.DIFFERENCE_DEPTH,
+            stream_type=StreamType.DIFFERENCE_DEPTH_STREAM,
             market=Market.SPOT
         )
 
         difference_depth_queue.currently_accepted_stream_id = difference_depth_stream_listener.id.id
 
         difference_depth_stream_listener_thread = threading.Thread(
-            target=difference_depth_stream_listener.websocket_app.run_forever,
-            daemon=True
+            target=difference_depth_stream_listener.websocket_app.run_forever
         )
 
         difference_depth_stream_listener_thread.start()
@@ -361,18 +359,20 @@ class TestStreamListener:
             logger=logger,
             queue=trade_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.TRADE,
+            stream_type=StreamType.TRADE_STREAM,
             market=Market.SPOT
         )
 
         trade_queue.currently_accepted_stream_id = trade_stream_listener.id
 
-        with patch.object(trade_stream_listener, 'restart_websocket_app') as mock_restart, \
-                patch.object(trade_stream_listener._blackout_supervisor, 'notify') as mock_notify:
+        with patch.object(StreamListener, 'restart_websocket_app') as mock_restart, \
+                patch.object(BlackoutSupervisor, 'notify') as mock_notify:
             trade_stream_listener.start_websocket_app()
 
             time.sleep(10)
+
             mock_notify.assert_called()
+
             mock_restart.assert_not_called()
 
         active_threads = [
@@ -380,24 +380,20 @@ class TestStreamListener:
             if thread is not threading.current_thread()
         ]
 
-        presumed_thread_name = f'stream_listener blackout supervisor {StreamType.TRADE} {Market.SPOT}'
+        presumed_thread_name = f'stream_listener blackout supervisor {StreamType.TRADE_STREAM} {Market.SPOT}'
 
-        assert trade_stream_listener._blackout_supervisor is not None, ("Supervisor should be instantiated within "
-                                                                        "StreamListener")
+        assert trade_stream_listener._blackout_supervisor is not None, (
+            "Supervisor should be instantiated within StreamListener"
+        )
         assert isinstance(trade_stream_listener._blackout_supervisor, BlackoutSupervisor)
-
         for name_ in active_threads:
             print(name_)
-
         assert presumed_thread_name in active_threads
         assert len(active_threads) == 2
-
         trade_stream_listener.websocket_app.close()
-
         TradeQueue.clear_instances()
 
     def test_given_difference_depth_stream_listener_when_init_then_supervisor_starts_correctly_and_is_being_notified(self):
-        logger = setup_logger()
 
         from unittest.mock import patch
 
@@ -421,12 +417,12 @@ class TestStreamListener:
             logger=setup_logger(),
             queue=difference_depth_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.DIFFERENCE_DEPTH,
+            stream_type=StreamType.DIFFERENCE_DEPTH_STREAM,
             market=Market.SPOT
         )
 
-        with patch.object(difference_depth_queue_listener, 'restart_websocket_app') as mock_restart, \
-                patch.object(difference_depth_queue_listener._blackout_supervisor, 'notify') as mock_notify:
+        with patch.object(StreamListener, 'restart_websocket_app') as mock_restart, \
+                patch.object(BlackoutSupervisor, 'notify') as mock_notify:
             difference_depth_queue_listener.start_websocket_app()
 
             time.sleep(10)
@@ -439,7 +435,7 @@ class TestStreamListener:
             if thread is not threading.current_thread()
         ]
 
-        presumed_thread_name = f'stream_listener blackout supervisor {StreamType.DIFFERENCE_DEPTH} {Market.SPOT}'
+        presumed_thread_name = f'stream_listener blackout supervisor {StreamType.DIFFERENCE_DEPTH_STREAM} {Market.SPOT}'
 
         assert difference_depth_queue_listener._blackout_supervisor is not None, "Supervisor should be instantiated within StreamListener"
         assert isinstance(difference_depth_queue_listener._blackout_supervisor, BlackoutSupervisor)
@@ -471,12 +467,11 @@ class TestStreamListener:
         trade_stream_listener = StreamListener(
             queue=trade_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.TRADE,
+            stream_type=StreamType.TRADE_STREAM,
             market=Market.SPOT
         )
 
-        trade_stream_listener_thread = threading.Thread(target=trade_stream_listener.websocket_app.run_forever,
-                                                        daemon=True)
+        trade_stream_listener_thread = threading.Thread(target=trade_stream_listener.websocket_app.run_forever)
         trade_stream_listener_thread.start()
 
         time.sleep(5)
@@ -511,13 +506,12 @@ class TestStreamListener:
         difference_depth_queue_listener = StreamListener(
             queue=difference_depth_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.DIFFERENCE_DEPTH,
+            stream_type=StreamType.DIFFERENCE_DEPTH_STREAM,
             market=Market.SPOT
         )
 
         difference_depth_stream_listener_thread = threading.Thread(
-            target=difference_depth_queue_listener.websocket_app.run_forever,
-            daemon=True)
+            target=difference_depth_queue_listener.websocket_app.run_forever)
         difference_depth_stream_listener_thread.start()
 
         time.sleep(5)
@@ -554,7 +548,7 @@ class TestStreamListener:
         trade_stream_listener = StreamListener(
             queue=trade_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.TRADE,
+            stream_type=StreamType.TRADE_STREAM,
             market=Market.SPOT
         )
 
@@ -591,7 +585,7 @@ class TestStreamListener:
         difference_depth_queue_listener = StreamListener(
             queue=difference_depth_queue,
             pairs=config['instruments']['spot'],
-            stream_type=StreamType.DIFFERENCE_DEPTH,
+            stream_type=StreamType.DIFFERENCE_DEPTH_STREAM,
             market=Market.SPOT
         )
 
@@ -611,68 +605,3 @@ class TestStreamListener:
 
     def test_given_difference_depth_stream_listener_when_websocket_app_close_then_supervisor_is_properly_stopped(self):
         ...
-
-
-class TestOther:
-
-    def test_non_unittest_test_given_trade_stream_listener_when_init_then_supervisor_starts_correctly(self):
-        config = {
-            "instruments": {
-                "spot": ["BTCUSDT", "ETHUSDT"],
-                "usd_m_futures": ["BTCUSDT", "ETHUSDT"],
-                "coin_m_futures": ["BTCUSD_PERP", "ETHUSD_PERP"]
-            },
-            "file_duration_seconds": 30,
-            "snapshot_fetcher_interval_seconds": 30,
-            "websocket_life_time_seconds": 100,
-            "save_to_json": False,
-            "save_to_zip": False,
-            "send_zip_to_blob": False
-        }
-
-        trade_queue = TradeQueue(market=Market.SPOT)
-
-        trade_stream_listener = StreamListener(
-            queue=trade_queue,
-            pairs=config['instruments']['spot'],
-            stream_type=StreamType.TRADE,
-            market=Market.SPOT
-        )
-
-        original_restart_websocket_app = trade_stream_listener.restart_websocket_app
-        trade_stream_listener.restart_websocket_app = lambda: print("Mocked restart_websocket_app called")
-
-        original_notify = trade_stream_listener._blackout_supervisor.notify
-        notify_called = False
-
-        def mock_notify():
-            nonlocal notify_called
-            notify_called = True
-
-        trade_stream_listener._blackout_supervisor.notify = mock_notify
-
-        trade_stream_listener_thread = threading.Thread(target=trade_stream_listener.websocket_app.run_forever,
-                                                        daemon=True)
-        trade_stream_listener_thread.start()
-        time.sleep(10)
-
-        assert notify_called, "Notify should have been called at least once."
-
-        trade_stream_listener.restart_websocket_app = original_restart_websocket_app
-        assert trade_stream_listener.restart_websocket_app != "Mocked restart_websocket_app called", \
-            "restart_websocket_app should not have been called."
-
-        active_threads = [
-            thread.name for thread in threading.enumerate()
-            if thread is not threading.current_thread()
-        ]
-
-        presumed_thread_name = f'stream_listener blackout supervisor {StreamType.TRADE} {Market.SPOT}'
-
-        assert trade_stream_listener._blackout_supervisor is not None, "Supervisor should be instantiated within StreamListener"
-        assert isinstance(trade_stream_listener._blackout_supervisor, BlackoutSupervisor)
-        assert presumed_thread_name in active_threads
-        assert len(active_threads) == 2
-
-        trade_stream_listener.websocket_app.close()
-        TradeQueue.clear_instances()

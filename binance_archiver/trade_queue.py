@@ -9,6 +9,17 @@ from binance_archiver.stream_id import StreamId
 
 
 class TradeQueue:
+    __slots__ = [
+        'lock',
+        '_market',
+        'did_websockets_switch_successfully',
+        'new_stream_listener_id',
+        'currently_accepted_stream_id',
+        'no_longer_accepted_stream_id',
+        'last_message_signs',
+        'queue'
+    ]
+
     _instances = []
     _lock = threading.Lock()
     _instances_amount_limit = 3
@@ -56,7 +67,8 @@ class TradeQueue:
                 return
 
             if stream_listener_id.id == self.currently_accepted_stream_id.id:
-                self.queue.put((message, timestamp_of_receive))
+                message_with_timestamp_of_receive = message[:-1] + f',"_E":{timestamp_of_receive}}}'
+                self.queue.put(message_with_timestamp_of_receive)
             else:
                 self.new_stream_listener_id = stream_listener_id
 
@@ -76,12 +88,12 @@ class TradeQueue:
         return '"s":"' + match.group(1) + '","t":' + match.group(2)
 
     def get(self) -> any:
-        message, received_timestamp = self.queue.get()
-        return message, received_timestamp
+        entry = self.queue.get()
+        return entry
 
     def get_nowait(self) -> any:
-        message, received_timestamp = self.queue.get_nowait()
-        return message, received_timestamp
+        entry = self.queue.get_nowait()
+        return entry
 
     def clear(self) -> None:
         self.queue.queue.clear()

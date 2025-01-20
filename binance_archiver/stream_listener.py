@@ -17,6 +17,18 @@ from binance_archiver.url_factory import URLFactory
 
 
 class StreamListener:
+    __slots__ = [
+        'logger',
+        'queue',
+        'pairs',
+        'stream_type',
+        'market',
+        'id',
+        'websocket_app',
+        'thread',
+        '_blackout_supervisor'
+    ]
+
     def __init__(
         self,
         logger: logging.Logger,
@@ -25,6 +37,7 @@ class StreamListener:
         stream_type: StreamType,
         market: Market
     ):
+
         if not isinstance(pairs, list):
             raise WrongListInstanceException('pairs argument is not a list')
         if len(pairs) == 0:
@@ -45,7 +58,6 @@ class StreamListener:
         self.thread = threading.Thread(
             target=self.websocket_app.run_forever,
             kwargs={'reconnect': 2},
-            daemon=True,
             name=f'websocket app thread {self.stream_type} {self.market} {self.id.start_timestamp}'
         )
         self.thread.start()
@@ -92,14 +104,14 @@ class StreamListener:
 
         message = None
 
-        if self.stream_type == StreamType.TRADE:
+        if self.stream_type == StreamType.TRADE_STREAM:
             message = {
                 "method": method,
                 "params": [f"{pair}@trade"],
                 "id": 1
             }
 
-        elif self.stream_type == StreamType.DIFFERENCE_DEPTH:
+        elif self.stream_type == StreamType.DIFFERENCE_DEPTH_STREAM:
             message = {
                 "method": method,
                 "params": [f"{pair}@depth@100ms"],
@@ -123,14 +135,14 @@ class StreamListener:
             stream_type=stream_type,
             market=market,
             check_interval_in_seconds=5,
-            max_interval_without_messages_in_seconds=10,
+            max_interval_without_messages_in_seconds=20 if market is Market.COIN_M_FUTURES else 15,
             on_error_callback=lambda: self.restart_websocket_app(),
             logger=self.logger
         )
 
         stream_url_methods = {
-            StreamType.DIFFERENCE_DEPTH: URLFactory.get_orderbook_stream_url,
-            StreamType.TRADE: URLFactory.get_trade_stream_url
+            StreamType.DIFFERENCE_DEPTH_STREAM: URLFactory.get_difference_depth_stream_url,
+            StreamType.TRADE_STREAM: URLFactory.get_trade_stream_url
         }
 
         url_method = stream_url_methods.get(stream_type, None)
@@ -163,23 +175,25 @@ class StreamListener:
             self._blackout_supervisor.notify()
 
         def _on_error(ws, error):
-            self.logger.error(f"_on_error: {market} {stream_type} {self.id.start_timestamp}: {error}")
-
-            self.logger.error("Traceback (most recent call last):")
-            self.logger.error(traceback.format_exc())
+            self.logger.error(f"_error: {market} {stream_type} {self.id.start_timestamp}: {error} "
+                              f"_error: Traceback (most recent call last): {traceback.format_exc()}")
 
         def _on_close(ws, close_status_code, close_msg):
             self.logger.info(
-                f"_on_close: {market} {stream_type} {self.id.start_timestamp}: WebSocket connection closed, "
-                f"{close_msg} (code: {close_status_code})"
+                f"_on_close: {market} {stream_type} {self.id.start_timestamp}"
+                f": WebSocket connection closed, {close_msg} (code: {close_status_code})"
             )
             self._blackout_supervisor.shutdown_supervisor()
 
-        def _on_ping(ws, message):
-            ws.send("", ABNF.OPCODE_PONG)
+        def _on_ping(ws, message: str, *args, **kwargs):
+            self.logger.debug(f'_on_ping: {market} {stream_type} ping has been received'
+                              f': {message}, args: {args}, kwargs: {kwargs}')
+
+            ws.send(message, ABNF.OPCODE_PONG)
 
         def _on_open(ws):
-            self.logger.info(f"_on_open : {market} {stream_type} {self.id.start_timestamp}: WebSocket connection opened")
+            self.logger.info(f"_on_open: {market} {stream_type} {self.id.start_timestamp}"
+                             f": WebSocket connection opened")
 
         def _on_reconnect(ws):
             self.logger.info(f'_on_reconnect: {market} {stream_type} {self.id.start_timestamp}')
@@ -188,7 +202,7 @@ class StreamListener:
             url=url,
             on_message=(
                 _on_trade_message
-                if stream_type == StreamType.TRADE
+                if stream_type == StreamType.TRADE_STREAM
                 else _on_difference_depth_message
             ),
             on_error=_on_error,

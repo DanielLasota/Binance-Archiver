@@ -5,6 +5,12 @@ from binance_archiver.exceptions import BadStreamIdParameter
 
 
 class StreamId:
+    __slots__ = [
+        'start_timestamp',
+        'uuid',
+        '_pairs'
+    ]
+
     def __init__(self, pairs: list[str]):
         self.start_timestamp = time.time_ns()
         self.uuid = uuid.uuid4()

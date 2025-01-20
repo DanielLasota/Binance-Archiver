@@ -6,6 +6,13 @@ import requests
 
 
 class FastAPIManager:
+    __slots__ = [
+        'app',
+        'server_thread',
+        'notify_cli',
+        'server'
+    ]
+
     def __init__(self):
         self.app = FastAPI()
         self.setup_routes()
@@ -47,7 +54,6 @@ class FastAPIManager:
 
     def run(self):
         self.server_thread = Thread(target=self.app_init, name='fastapi_manager_thread')
-        self.server_thread.daemon = True
         self.server_thread.start()
 
     def shutdown(self):
@@ -59,12 +65,3 @@ class FastAPIManager:
             self.server_thread.join(timeout=2)
             if self.server_thread.is_alive():
                 print("Warning: server thread did not terminate properly.")
-
-
-'''
-curl -X POST http://localhost:5000/post -H "Content-Type: application/json" -d '{"subscribe": ["StreamType.DifferenceDepth", "Market.SPOT", 'xrpusdt']}'
-curl -X POST http://localhost:5000/post -H "Content-Type: application/json" -d "{\"key\": \"value\"}"
-curl -X POST http://localhost:5000/post -H "Content-Type: application/json" -d "{"modify_subscription": {"type": "subscribe", "stream_type": "DifferenceDepth", "market": "SPOT", "asset": "xrpusdt"}}"
-curl -X POST http://localhost:5000/post -H "Content-Type: application/json" -d "{\"modify_subscription\": {\"type\": \"subscribe\", \"stream_type\": \"DifferenceDepth\", \"market\": \"SPOT\", \"asset\": \"xrpusdt\"}}"
-curl -X POST http://localhost:5000/post -H "Content-Type: application/json" -d "{\"modify_subscription\": {\"type\": \"subscribe\", \"market\": \"SPOT\", \"asset\": \"xrpusdt\"}}"
-'''

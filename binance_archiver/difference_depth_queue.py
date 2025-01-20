@@ -11,6 +11,17 @@ from binance_archiver.stream_id import StreamId
 
 
 class DifferenceDepthQueue:
+
+    __slots__ = [
+        '_market',
+        'lock',
+        'currently_accepted_stream_id',
+        'no_longer_accepted_stream_id',
+        'did_websockets_switch_successfully',
+        '_two_last_throws',
+        'queue'
+    ]
+
     _instances = []
     _lock = threading.Lock()
     _instances_amount_limit = 3
@@ -55,7 +66,8 @@ class DifferenceDepthQueue:
                 return
 
             if stream_listener_id.id == self.currently_accepted_stream_id:
-                self.queue.put((message, timestamp_of_receive))
+                message_with_timestamp_of_receive = message[:-1] + f',"_E":{timestamp_of_receive}}}'
+                self.queue.put(message_with_timestamp_of_receive)
 
             self._append_message_to_compare_structure(stream_listener_id, message)
 

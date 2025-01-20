@@ -2,7 +2,7 @@ from enum import Enum, auto
 
 
 class StreamType(Enum):
-    DIFFERENCE_DEPTH = auto()
-    TRADE = auto()
+    DIFFERENCE_DEPTH_STREAM = auto()
+    TRADE_STREAM = auto()
     DEPTH_SNAPSHOT = auto()
     ...

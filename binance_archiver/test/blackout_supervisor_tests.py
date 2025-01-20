@@ -12,7 +12,7 @@ def mock_logger():
 @pytest.fixture
 def supervisor_fixture(mock_logger):
     return BlackoutSupervisor(
-        stream_type=StreamType.TRADE,
+        stream_type=StreamType.TRADE_STREAM,
         market=Market.SPOT,
         check_interval_in_seconds=1,
         max_interval_without_messages_in_seconds=2,
@@ -22,7 +22,7 @@ def supervisor_fixture(mock_logger):
 class TestBlackoutSupervisor:
 
     def test_given_blackout_supervisor_when_initialized_then_has_correct_parameters(self, mock_logger):
-        stream_type = StreamType.DIFFERENCE_DEPTH
+        stream_type = StreamType.DIFFERENCE_DEPTH_STREAM
         market = Market.USD_M_FUTURES
         check_interval = 5
         max_interval = 10

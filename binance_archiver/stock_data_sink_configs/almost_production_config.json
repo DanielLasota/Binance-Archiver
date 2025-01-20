@@ -47,10 +47,10 @@
       "SUIUSD_PERP"
     ]
   },
-  "file_duration_seconds": 30,
-  "snapshot_fetcher_interval_seconds": 60,
-  "websocket_life_time_seconds": 60,
+  "file_duration_seconds": 120,
+  "snapshot_fetcher_interval_seconds": 120,
+  "websocket_life_time_seconds": 21600,
   "save_to_json": false,
   "save_to_zip": false,
-  "send_zip_to_blob": false
+  "send_zip_to_blob": true
 }

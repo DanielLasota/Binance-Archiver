@@ -8,6 +8,20 @@ from binance_archiver.enum_.stream_type_enum import StreamType
 
 
 class BlackoutSupervisor:
+
+    __slots__ = [
+        'stream_type',
+        'market',
+        'on_error_callback',
+        'last_message_time_epoch_seconds_utc',
+        'check_interval_in_seconds',
+        'max_interval_without_messages_in_seconds',
+        'running',
+        'lock',
+        'thread',
+        'logger'
+    ]
+
     def __init__(
             self,
             stream_type: StreamType,
@@ -15,7 +29,7 @@ class BlackoutSupervisor:
             check_interval_in_seconds,
             max_interval_without_messages_in_seconds,
             on_error_callback = None,
-            logger: logging.Logger | None = None,
+            logger: logging.Logger | None = None
     ) -> None:
         self.stream_type = stream_type
         self.market = market
@@ -27,6 +41,7 @@ class BlackoutSupervisor:
         self.lock = threading.Lock()
         self.thread = None
         self.logger = logger
+
 
     def run(self):
         self.thread = threading.Thread(
