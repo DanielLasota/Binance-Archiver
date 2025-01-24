@@ -60,7 +60,7 @@ class TradeQueue:
     def market(self):
         return self._market
 
-    def put_trade_message(self,stream_listener_id: StreamId,message: str,timestamp_of_receive: int) -> None:
+    def put_trade_message(self, stream_listener_id: StreamId, message: str, timestamp_of_receive: int) -> None:
 
         with self.lock:
             if stream_listener_id.id == self.no_longer_accepted_stream_id.id:

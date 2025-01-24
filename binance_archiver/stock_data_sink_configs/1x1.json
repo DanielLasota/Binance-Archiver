@@ -1,0 +1,13 @@
+{
+  "instruments": {
+    "spot": [
+      "BTCUSDT"
+    ]
+  },
+  "snapshot_fetcher_interval_seconds": 3600,
+  "websocket_life_time_seconds": 21600,
+  "file_duration_seconds": 120,
+  "save_to_json": false,
+  "save_to_zip": false,
+  "send_zip_to_blob": false
+}
