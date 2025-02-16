@@ -17,8 +17,8 @@ def load_storage_connection_parameters_from_environ() -> StorageConnectionParame
     return StorageConnectionParameters(
         azure_blob_parameters_with_key=os.environ.get('AZURE_BLOB_PARAMETERS_WITH_KEY'),
         azure_container_name=os.environ.get('AZURE_CONTAINER_NAME'),
-        backblaze_access_key_id=os.environ.get('BACKBLAZE_ACCESS_KEY_ID_PROD'),
-        backblaze_secret_access_key=os.environ.get('BACKBLAZE_SECRET_ACCESS_KEY_PROD'),
-        backblaze_endpoint_url=os.environ.get('BACKBLAZE_ENDPOINT_URL_PROD'),
-        backblaze_bucket_name=os.environ.get('BACKBLAZE_BUCKET_NAME_PROD')
+        backblaze_access_key_id=os.environ.get('BACKBLAZE_ACCESS_KEY_ID'),
+        backblaze_secret_access_key=os.environ.get('BACKBLAZE_SECRET_ACCESS_KEY'),
+        backblaze_endpoint_url=os.environ.get('BACKBLAZE_ENDPOINT_URL'),
+        backblaze_bucket_name=os.environ.get('BACKBLAZE_BUCKET_NAME')
     )

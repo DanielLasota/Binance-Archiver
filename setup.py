@@ -26,8 +26,7 @@ setup(
         ],
         'azure': [
             'azure-identity',
-            'azure-storage-blob',
-            'boto3==1.35.2'
+            'azure-storage-blob'
         ]
     },
     long_description=open("README.md").read(),
