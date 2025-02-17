@@ -16,7 +16,7 @@ class OwnLightweightS3Client:
         'storage_connection_parameters',
         'region',
         'service',
-        'host',
+        'host'
     ]
 
     def __init__(

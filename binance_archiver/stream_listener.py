@@ -60,11 +60,10 @@ class StreamListener:
         self._blackout_supervisor = BlackoutSupervisor(
             asset_parameters=asset_parameters,
             on_error_callback=lambda: self.restart_websocket_app(),
-            max_interval_without_messages_in_seconds=20 if self.asset_parameters.market is Market.COIN_M_FUTURES else 15,
+            max_interval_without_messages_in_seconds=60 if self.asset_parameters.market is Market.COIN_M_FUTURES else 30,
         )
 
     def start_websocket_app(self):
-        self._stop_event.clear()
         self.logger.info(f"{self.asset_parameters.market} {self.asset_parameters.stream_type} {self.id.start_timestamp} Starting streamListener")
         self.thread = threading.Thread(target=self._run_event_loop, daemon=True)
         self.thread.start()
@@ -173,11 +172,15 @@ class StreamListener:
                     else (raw_timestamp_of_receive_ns + 500_000) // 1_000_000
                 )
 
-            except websockets.exceptions.ConnectionClosed:
-                self.logger.warning(
-                    f"{self.asset_parameters.market} {self.asset_parameters.stream_type} WebSocket closed remotely."
-                )
-                break
+            except websockets.exceptions.ConnectionClosed as e:
+                if not self._stop_event.is_set():
+                    self.logger.warning(
+                        f"{e} \n"
+                        f"stream_listener_id: {self.id.id} "
+                        f"{self.asset_parameters.market} {self.asset_parameters.stream_type} "
+                        f"self._stop_event.is_set(): {self._stop_event.is_set()}"
+                    )
+
 
             self._handle_incoming_message(
                 raw_message=message,
@@ -201,8 +204,6 @@ class StreamListener:
                     message=raw_message,
                     timestamp_of_receive=timestamp_of_receive
                 )
-        # else:
-        #     print(f'received message other than stream: {raw_message}')
 
     async def _send_message(self, message: str):
         with self._ws_lock:
