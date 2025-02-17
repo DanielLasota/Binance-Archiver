@@ -144,7 +144,16 @@ class CommandLineInterface:
 
         output_lines.append("BINANCE ARCHIVER STATUS:")
         output_lines.append("------------------------------------------")
-        output_lines.append("Queue Status with len and newest message:")
+        output_lines.append("Queue Pool len:")
+        output_lines.append("------------------------------------------")
+
+        for (market, stream_type), queue_instance in self.stream_service.queue_pool.queue_lookup.items():
+            output_lines.append(f"{market} {stream_type} : {queue_instance.queue.qsize()}")
+        output_lines.append("\n")
+
+
+        output_lines.append("------------------------------------------")
+        output_lines.append("Queue Pool newest message:")
         output_lines.append("------------------------------------------")
 
         for (market, stream_type), queue_instance in self.stream_service.queue_pool.queue_lookup.items():
@@ -152,7 +161,8 @@ class CommandLineInterface:
                 last_message = queue_instance.queue.queue[-1] if queue_instance.queue.qsize() > 0 else "Empty queue"
             except Exception as e:
                 last_message = f"Error: {e}"
-            output_lines.append(f"{market} {stream_type} : {queue_instance.queue.qsize()} {last_message}")
+            output_lines.append(f"{market} {stream_type} : {last_message}")
+            output_lines.append(f"\n")
 
         output_lines.append("------------------------------------------")
         output_lines.append("Stream service status:")

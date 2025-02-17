@@ -152,10 +152,7 @@ class StreamDataSaverAndSender:
     ) -> None:
         thread = threading.Thread(
             target=self._write_stream_to_target,
-            args=(
-                queue,
-                asset_parameters
-            ),
+            args=(queue, asset_parameters),
             name=f'stream_writer: market: {asset_parameters.market}, stream_type: {asset_parameters.stream_type}'
         )
         thread.start()
@@ -197,10 +194,8 @@ class StreamDataSaverAndSender:
 
             while not queue.empty():
                 message = queue.get_nowait()
-
                 match = self._stream_message_pair_pattern.search(message)
                 pair_found_in_message = match.group(1)
-
                 stream_data[pair_found_in_message].append(message)
 
             for pair, data in stream_data.items():
